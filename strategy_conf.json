@@ -1,0 +1,92 @@
+    {
+      "Configuration_name": "BUYSELL01",
+      "entry_parameters": {
+        "long": {
+          "indicators": [
+            {
+              "type": "RSI",
+              "value": 30
+            }
+          ],
+          "amount": 1%,
+          "leverage": 5
+        },
+        "short": {
+          "indicators": [
+            {
+              "type": "RSI",
+              "value": 30
+            }
+          ],
+          "amount": 1%,
+          "leverage": 5
+        }
+      },
+      "exit_parameters": {
+        "long": {
+          "indicators": [
+            {
+              "type": "RSI",
+              "value": 30
+            }
+          ],
+          "take_profit": "1.5%",
+          "stop_loss": "1.5%"
+        },
+        "short": {
+          "indicators": [
+            {
+              "type": "RSI",
+              "value": 30
+            }
+          ],
+          "take_profit": "1.5%",
+          "stop_loss": "1.5%"
+        }
+      }
+    },
+    {
+      "Configuration_name": "BUYSELL02",
+      "entry_parameters": {
+        "long": {
+          "indicators": [
+            {
+              "type": "RSI",
+              "value": 70
+            },
+            {
+              "type": "MAO",
+              "value": 50
+            }
+          ],
+          "amount": 1%,
+          "leverage": 5
+        },
+        "short": {
+          "indicators": [],
+          "amount": null,
+          "leverage": null
+        }
+      },
+      "exit_parameters": {
+        "long": {
+          "indicators": [
+            {
+              "type": "RSI",
+              "value": 30
+            },
+            {
+              "type": "MAO",
+              "value": 20
+            }
+          ],
+          "take_profit": "1.5%",
+          "stop_loss": "1.5%"
+        },
+        "short": {
+          "indicators": [],
+          "take_profit": null,
+          "stop_loss": null
+        }
+      }
+    }

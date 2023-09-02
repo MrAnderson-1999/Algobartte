@@ -1,0 +1,141 @@
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    font-family: "Monaco", "Consolas", "Inconsolata", monospace;
+}
+
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url('https://images.ctfassets.net/zmrtlfup12q3/6dYmfAQZk1UZecsgzkld5e/e2b2000384effa0d1c05e57b38bbc8c5/Header_GIF.gif'); /* Change this URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+    transition: background-image 0.5s ease;
+}
+
+.hello-world {
+    text-align: center;
+    color: antiquewhite;
+}
+
+.sign-in {
+    display: none;
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: min(75vw, 75vh); /* Choose the smaller dimension */
+    height: min(75vw, 75vh); /* Choose the smaller dimension */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid black;
+    opacity: 0.8;
+    flex-direction: column;
+}
+.sign-in h1 {
+    position: absolute;
+    top: 10%;
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: min(2rem, 3rem);
+    color: black;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.sign-in button {
+    width: 200px;
+    padding: 1em 2.5em;
+    background-color: white;
+    border-radius: 3rem;
+    font-size: 1em;
+}
+
+#go_back {
+    position: absolute;
+    top: 2%;
+    bottom: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-bottom: 5rem;
+    width: min(10px, 50px);
+    height: min(5px, 40px);
+    background-image: url('https://cdn.icon-icons.com/icons2/3257/PNG/512/arrow_go_back_icon_206152.png');
+    background-size: cover;
+    /* border: 1px solid black; */
+    cursor: pointer;
+}
+
+#google, #facebook, #phone {
+    border: 2px solid;
+}
+
+#google:hover {
+    background-color: red;
+    opacity: 0.8;
+}
+
+#facebook:hover {
+    background-color: blue;
+    opacity: 0.8;
+}
+
+#phone:hover {
+    background-color: green;
+    opacity: 0.8;
+}
+
+#myButton {
+    padding: 0.5em 2em;
+    font-size: 1.5em;
+    background-color: black;
+    border: 2px solid antiquewhite;
+    border-radius: 1rem;
+    margin: 20px auto;
+    color: antiquewhite;
+}
+
+#myButton:hover {
+    background-color: coral;
+    border: 1px solid coral;
+}
+
+#hello-world:hover {
+    color: lightyellow;
+}
+
+.animated-heading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-heading1 {
+    animation: fadeInOut 2s infinite;
+    animation-delay: 0s;
+}
+
+.animated-heading2 {
+    animation: fadeInOut 2s infinite;
+    animation-delay: 2s;
+}
+
+.background-change {
+    background-image: url('https://64.media.tumblr.com/d99434c3175fd427cae1d6afad3998e3/tumblr_pep5gqbyIA1w3y4ilo1_640.gif');
+    opacity: 0.9; /* Adjust the opacity value for the dimming effect */
+}

@@ -1,0 +1,65 @@
+{
+    "Trade_ID": "2achsssd",
+    "Timestamp": "2023-08-13 16:34:27",
+    "Action": "Buy",
+    "Exchange": "Binance",
+    "Symbol": "BTCUSDT",
+    "Position_Type": "Long",
+    "Position_Entry": {
+      "Long": {
+        "Price_entry": "double",
+        "Timestamp": "ISODate(...)",
+        "Units": 10.0,
+        "Indicator": {
+          "Type": "RSI",
+          "Value": 40
+        },
+        "Amount": "double/$",
+        "Leverage": "5"
+      },
+      "Short": null
+    },
+    "Position_Exit": null,
+    "Total_Action_Amount": "double/$ [amount*leverage]",
+    "Configuration_Name": "BUYSELL01",
+    "Profit_Loss": null
+  },
+  {
+    "Trade_ID": "xyz123",
+    "Timestamp": "2023-08-14 10:15:30",
+    "Action": "Sell",
+    "Exchange": "IBKR",
+    "Symbol": "META",
+    "Position_Type": "Short",
+    "Position_Entry": {
+      "Long": null,
+      "Short": {
+        "Price_entry": "double",
+        "Timestamp": "ISODate(...)",
+        "Units": "double",
+        "Indicator": {
+          "Type": "MAO",
+          "Value": 40
+        },
+        "Amount": "double/$",
+        "Leverage": "int"
+      }
+    },
+    "Position_Exit": {
+      "Long": null,
+      "Short": {
+        "Price_exit": "double",
+        "Timestamp": "ISODate(...)",
+        "Units": "double",
+        "Trigger": "indicator/stoploss/profit",
+        "Is_Profit": "boolean"
+      }
+    },
+    "Total_Action_Amount": "double/$",
+    "Configuration_Name": "BUYSELL02",
+    "Profit_Loss": {
+      "Dollar": -10.75"double",
+      "Percentage": -10"double",
+      "Deal_Minutes": 4.8"double"
+    }
+  }

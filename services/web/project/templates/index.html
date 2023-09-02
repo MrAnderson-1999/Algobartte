@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %} - Human</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <!-- Add your header content here if needed -->
+    </header>
+    <div class="main-div">
+        <div class="hello-world">
+            <h1 id="hello-world" class="layout">Hello World</h1>
+            <h2 class="layout animated-heading animated-heading1">Submit Your Emotional Result</h2>
+            <h2 class="layout animated-heading animated-heading2">And See All Others</h2>
+            <button class="layout" id="myButton"><strong>Get</strong> Started</button>
+        </div>
+        <div id="sign-in" class="sign-in">
+            <button id="go_back" onclick="goBack()" aria-label="Go Back"></button>
+            <h1>Sign In</h1>
+            <form action="/login" method="post">
+                <div class="social-buttons">
+                    <button id="google" type="submit" name="provider" value="google">Google</button>
+                    <button id="facebook" type="submit" name="provider" value="facebook">Facebook</button>
+                </div>
+            </form>
+            <form action="/login" method="post">
+                <button type="submit" id="phone">Phone Number</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© LeonAvshalom Co 2023</p>
+    </footer>
+    <!-- Include your JavaScript files here if needed -->
+    <script src="https://ai-sdk.morphcast.com/v1.16/ai-sdk.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script type="module" src="../static/camera.js"></script>
+    <script type="module" src="../static/emotion_detector.js"></script>
+</body>
+</html>
