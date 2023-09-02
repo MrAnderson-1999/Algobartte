@@ -77,3 +77,20 @@
 2023-09-02 11:06:51 [INFO] 127.0.0.1 - - [02/Sep/2023 11:06:51] "GET / HTTP/1.1" 200 -
 2023-09-02 11:07:02 [INFO] 127.0.0.1 - - [02/Sep/2023 11:07:02] "[33mGET /static HTTP/1.1[0m" 404 -
 2023-09-02 11:07:20 [INFO] 127.0.0.1 - - [02/Sep/2023 11:07:20] "GET /static/css/style.css HTTP/1.1" 200 -
+2023-09-02 14:31:13 [INFO] Starting Flask app.
+2023-09-02 14:31:15 [INFO] Starting Flask app.
+2023-09-02 14:31:15 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.27.0.3:5000
+2023-09-02 14:31:15 [INFO] [33mPress CTRL+C to quit[0m
+2023-09-02 14:31:15 [INFO]  * Restarting with stat
+2023-09-02 14:31:15 [INFO] Starting Flask app.
+2023-09-02 14:31:15 [WARNING]  * Debugger is active!
+2023-09-02 14:31:15 [INFO]  * Debugger PIN: 760-550-527
+2023-09-02 14:31:19 [INFO] Accessing the index route.
+2023-09-02 14:31:19 [INFO] 172.27.0.1 - - [02/Sep/2023 14:31:19] "GET / HTTP/1.1" 200 -
+2023-09-02 14:31:19 [INFO] 172.27.0.1 - - [02/Sep/2023 14:31:19] "GET /static/css/style.css HTTP/1.1" 200 -
+2023-09-02 14:31:19 [INFO] 172.27.0.1 - - [02/Sep/2023 14:31:19] "[33mGET /static/camera.js HTTP/1.1[0m" 404 -
+2023-09-02 14:31:19 [INFO] 172.27.0.1 - - [02/Sep/2023 14:31:19] "[33mGET /static/emotion_detector.js HTTP/1.1[0m" 404 -
+2023-09-02 14:31:19 [INFO] 172.27.0.1 - - [02/Sep/2023 14:31:19] "GET /static/js/main.js HTTP/1.1" 200 -
