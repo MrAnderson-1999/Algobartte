@@ -25,7 +25,7 @@ services:
   nginx:
     build:
       context: ./services/nginx
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     volumes:
       - static_volume:/home/app/web/project/static
     ports:
