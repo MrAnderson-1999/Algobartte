@@ -14,13 +14,16 @@ Delete volumes:
 DB
 ---
 Connect to the db container terminal:
-    docker compose exec db psql --username=db_admin --dbname=my_pg_db
+    docker compose exec db
 
 Connect to db inside the db terminal:
     \c my_pg_db
 
 create the table inside db, based on function at manage.py:
     docker-compose exec web python manage.py create_db
+
+connect specific db via psql from within the container
+    psql --username=db_admin --dbname=my_pg_db
 -
 
 
