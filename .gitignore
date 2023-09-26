@@ -5,3 +5,4 @@ __pycache__
 */venv
 *.log
 commands.txt
+cloud_init.prod.sh

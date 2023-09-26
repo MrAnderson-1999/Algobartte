@@ -10,7 +10,7 @@ if [ -d "Algobartte" ]; then
 else
     # Clone your project repository
     echo -e "${GREEN}---REPO CLONE STARTED---${OFF}\n";
-    if git clone https://MrAnderson-1999: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@github.com/MrAnderson-1999/Algobartte.git; then
+    if git clone https://github.com/MrAnderson-1999/Algobartte.git; then
         echo -e "${GREEN}####################${OFF}";
         echo -e "${GREEN}Cloning repo finished${OFF}";
         echo -e "${GREEN}####################${OFF}\n";
