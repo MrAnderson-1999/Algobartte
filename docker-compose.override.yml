@@ -4,5 +4,3 @@ services:
     user: root
   nginx:
     user: root
-  db:
-    user: root
