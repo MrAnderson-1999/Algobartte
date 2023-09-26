@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 75%;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-group input[type="text"] {
+            width: 50%;
+            padding: 15px; /* Increased padding to make the content larger */
+            font-size: 18px; /* Increased font size */
+            border: 2px solid #ccc; /* Thicker border for emphasis */
+            border-radius: 6px; /* Slightly rounder corners */
+        }
+
+        .submit-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 15px 30px; /* Increased padding for the button */
+            font-size: 20px; /* Increased font size for the button */
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            font-size: 24px; /* Increased font size for the heading */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>HOW DO YOU FEEL?</h2>
+        <form method="post" action="/emotion_result">
+            <div class="form-group">
+                <input placeholder="From 1-5 how much Angry you are?" type="text" id="angry" name="angry" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="From 1-5 how much Happy you are?" type="text" id="happy" name="happy" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="From 1-5 how much Sad you are?" type="text" id="sad" name="sad" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="From 1-5 how much Surprised you are?" type="text" id="surprise" name="surprise" required>
+            </div>
+            <div class="form-group">
+                <input placeholder="From 1-5 how much Disgust you are?" type="text" id="disgust" name="disgust" required>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

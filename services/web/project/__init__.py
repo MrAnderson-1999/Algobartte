@@ -1,11 +1,9 @@
 from flask import Flask, send_from_directory, render_template, request
-from flask_sqlalchemy import SQLAlchemy
+import psycopg2
 import logging
 
 app = Flask(__name__)
 app.config.from_object("project.config.Config")
-db = SQLAlchemy(app)
-
 # Configure the logger
 log_filename = app.config["LOG_FILENAME"]
 log_level = app.config["LOG_LEVEL"]
@@ -16,15 +14,13 @@ logger = logging.getLogger(__name__)
 # Log when the application starts
 logger.info("Starting Flask app.")
 
-class User(db.Model):
-    __tablename__ = "users"
-
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(128), unique=True, nullable=False)
-    active = db.Column(db.Boolean(), default=True, nullable=False)
-
-    def __init__(self, email):
-        self.email = email
+# Connect to the database
+conn = psycopg2.connect(
+    host=app.config["DB_HOST"],
+    database="my_pg_db",
+    user="db_admin",
+    password="password"
+)
 
 @app.route("/static/<path:filename>")
 def staticfiles(filename):
@@ -36,23 +32,26 @@ def index():
     logger.info("Accessing the index route.")
     return render_template("index.html")
 
-@app.route('/receive_alert', methods=['POST'])
-def receive_alert():
-    # alert_data = request.get_json()  # Assuming alerts are sent as JSON
-    # Process the alert data here
-    return 'Alert received!'
+@app.route("/evaluate")
+def evaluate():
+    # Log when the index route is accessed
+    logger.info("Accessing the /evaluate route.")
+    return render_template("evaluate.html")
 
 
+@app.route('/emotion_result', methods=['POST'])
+def create():
+    # Get the username and email from the request body
+    angry = request.form.get('angry')
+    sad = request.form.get('sad')
+    happy = request.form.get('happy')
+    disgust = request.form.get('disgust')
+    surprise = request.form.get('surprise')
 
-# if __name__ == "__main__":
-#     # Initialize the database and log when the connection is established
-#     with app.app_context():
-#         db.init_app(app)
-#         db.create_all()
-#         logger.info("Database connection established.")
-
-#     # Log when specific routes are registered
-#     logger.info("Registering routes.")
-
-#     # Start the application and log success
-#     logger.info("Flask app started successfully.")
+    # Insert the data into the database
+    cur = conn.cursor()
+    cur.execute(
+        "INSERT INTO emotion (angry,sad,happy,disgust,surprise) VALUES (%s, %s, %s, %s, %s)", (angry,sad,happy,disgust,surprise))
+    conn.commit()
+ 
+    return 'User created successfully!'

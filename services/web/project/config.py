@@ -5,10 +5,13 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config(object):
-    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL", "sqlite://")
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    # Database configuration
     STATIC_FOLDER = f"{os.getenv('APP_FOLDER')}/project/static"
-    
+    DB_HOST = os.getenv('DB_HOST')
+    POSTGRES_USER = os.getenv('POSTGRES_USER')
+    POSTGRES_PASSWORD = os.getenv('POSTGRES_PASSWORD')
+    POSTGRES_DB = os.getenv('POSTGRES_DB')
+
     # Logging configuration
     LOG_LEVEL = logging.INFO  # Set your desired log level
     LOG_FILENAME = "app.log"  # Set your log file name
