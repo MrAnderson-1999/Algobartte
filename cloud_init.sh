@@ -59,7 +59,7 @@ cd Algobartte || exit
 
 # Build Docker images from your Docker Compose file
 echo -e "${GREEN}---BUILD IMAGE STARTED---${OFF}\n";
-if docker compose -f docker-compose.prod.yml build; then
+if docker-compose -f docker-compose.prod.yml -f docker-compose.override.yml build; then
     echo -e "${GREEN}####################${OFF}";
     echo -e "${GREEN}FInished Building${OFF}";
     echo -e "${GREEN}####################${OFF}\n";
